@@ -1,0 +1,17 @@
+dnspython
+colorama
+requests
+requests[socks]
+argparse
+awscli
+pytest-xdist
+colored
+boto3
+soupsieve
+dnsgen
+colored
+jsbeautifier
+BeautifulSoup4
+bs4
+gittyleaks
+trufflehog
