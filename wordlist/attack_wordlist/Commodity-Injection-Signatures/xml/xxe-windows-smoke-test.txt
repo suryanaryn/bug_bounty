@@ -1,6 +1,0 @@
-<!DOCTYPE roottag [
- <!ENTITY windowsfile SYSTEM ".">
-]>
-<roottag>
- <sometag>&windowsfile;</sometag>
-</roottag>

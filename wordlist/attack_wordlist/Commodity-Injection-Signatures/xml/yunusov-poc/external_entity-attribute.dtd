@@ -1,3 +1,0 @@
-<!ENTITY % payload SYSTEM "file:///sys/power/image_size">
-<!ENTITY % param1 "<!ENTITY internal '%payload;'>">
-%param1;

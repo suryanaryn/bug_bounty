@@ -1,4 +1,0 @@
-<!DOCTYPE data [
-<!ENTITY a0 "dosdosdosdosdosdos...dos"
-]>
-<data>&a0;&a0;...&a0;</data>
