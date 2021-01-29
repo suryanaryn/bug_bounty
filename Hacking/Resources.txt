@@ -1,0 +1,16 @@
+A new bootable USB solution.
+    https://github.com/TommyMandex/Ventoy
+
+undetectable payload metasploit bypass android antivirus. 
+   https://github.com/kinghacker0/Undetectable
+
+exploitation for all Machines
+    https://github.com/aerosol-can/PhoneSploit
+    https://github.com/TommyMandex/BACKDROID
+    https://github.com/Ignitetch/AdvPhishing
+
+Black hat code
+    https://github.com/TommyMandex/black-hat-python3-code
+
+Wifi Hacking
+    https://github.com/entynetproject/ehtools

@@ -1,2 +1,10 @@
-tools/amass/bin/config.json
-tools/amass/config.ini
+changes/chorus.ai
+config_files
+changes/domains
+tools/target/*
+tools/amass/amass.json
+tools/amass/amass.log
+tools/amass/indexes.bolt
+Attack
+.vscode
+~
