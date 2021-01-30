@@ -57,7 +57,7 @@
   git clone https://github.com/BountyStrike/Injectus.git
   pip3 install -r requirements.txt
   python3 openredirex.py -u "https://vulnerable.com/?url=FUZZ" -p payloads.txt --keyword FUZZ  
-  
+                                                                                                                
   xsstrike
   xsser -i /root/Bug-Bounty-Tools/subdomains.lst --auto --reverse-check --Str --Coo --Xsa --Xsr --Ind --Anchor --Dcp --Dom -c 99999 --Cw=50 --delay=1 --save  --Phpids0.6.5  --Phpids0.7 --Imperva --Webknight --F5bigip --Barracuda --Modsec --Quickdefense --heuristic --threads=10 
   

@@ -17,7 +17,7 @@ cat domains.txt | httprobe | xargs curl | tok | tr '[:upper:]' '[:lower:]' | sor
 
 # Find Hidden Servers and/or Admin Panels
 ffuf -c -u https://target .com -H "Host: FUZZ" -w vhost_wordlist.txt 
-
+ffuf -u https://target.com/FUZZ -w /wordlist -mc 200,403 -s -c -recursion-depth 1 -replay-proxy http://127.0.0.1 8080 
 # Open-redirect
 export LHOST="http://localhost"; gau $1 | gf redirect | qsreplace "$LHOST" | xargs -I % -P 25 sh -c 'curl -Is "%" 2>&1 | grep -q "Location: $LHOST" && echo "VULN! %"'
 
@@ -52,8 +52,9 @@ gau $1 | while read url;do target=$(curl -s -I -H "Origin: $site.evil.com" -X GE
 
 assetfinder fitbit.com | httpx -threads 300 -follow-redirects -silent | rush -j200 'curl -m5 -s -I -H "Origin:evil.com" {} |  [[ $(grep -c "evil.com") -gt 0 ]] && printf "\n\033[0;32m[VUL TO CORS] - {}\e[m"' 2>/dev/null
 
+#Ssrf
 cat $1 | gau   | head -n 5000 > google.txt; cat google.txt | sort -u | grep -a -i \=http > ssrf_redirects.txt
-
+findomain -t DOMAIN -q | httpx -silent -threads 1000 | gau |  grep "=" | qsreplace http://YOUR.burpcollaborator.net
 
 # Assets from chaos-bugbounty-list
 curl -sL https://github.com/projectdiscovery/public-bugbounty-programs/raw/master/chaos-bugbounty-list.json | jq -r '.programs[].domains | to_entries | .[].value'
@@ -70,3 +71,7 @@ curl -sL https://github.com/arkadiyt/bounty-targets-data/raw/master/data/yesweha
 curl -sL https://github.com/arkadiyt/bounty-targets-data/raw/master/data/hackenproof_data.json | jq -r '.[].targets.in_scope[] | [.target, .type, .instruction] | @tsv'| grep Web  | awk '{print $1}' | tee -a allTargets
 # Federacy Programs
 curl -sL https://github.com/arkadiyt/bounty-targets-data/raw/master/data/federacy_data.json | jq -r '.[].targets.in_scope[] | [.target, .type] | @tsv'| grep website  | awk '{print $1}' | tee -a allTargets
+
+
+
+

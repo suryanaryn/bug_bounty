@@ -264,6 +264,19 @@ function install_tools	() {
 		echo -e "$LIGHT_GREEN[+] Installing CORStest from Github.""$NORMAL";
 		git clone https://github.com/RUB-NDS/CORStest.git "$TOOLS"/CORStest;
 	fi
+	if [[ -d "$TOOLS"/GitDorker ]]; then
+			echo -e "$LIGHT_GREEN[+] Udationg GitDorker.""$NORMAL";
+			cd "$TOOLS"/GitDorker;
+			git pull;
+			cd ;
+		else
+		echo -e "$LIGHT_GREEN"[+] Installing GitDorker from Github.""$NORMAL";
+		git clone https://github.com/obheda12/GitDorker.git "$TOOLS"/GitDorker
+		cd "$TOOLS"/GitDorker;													
+		chmod +x GitDorker.py
+		pip3 install -r requirements.txt  
+			
+	if		
 	if [[ -d "$TOOLS"/bypass-403 ]]; then
 			echo -e "$LIGHT_GREEN[+] Updating bypass-403.""$NORMAL";
 			cd "$TOOLS"/bypass-403;
