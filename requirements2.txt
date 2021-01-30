@@ -16,3 +16,4 @@ colored
 boto3
 geoip
 hsecscan
+xsrfprobe

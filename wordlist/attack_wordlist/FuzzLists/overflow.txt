@@ -1,4 +1,7 @@
 INJECTX
+
+#We can do DDOS using this payloads
+
 -1
 0
 0x100
